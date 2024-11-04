@@ -1,0 +1,5 @@
+amends ".../modules/redis.pkl"
+
+host = "redis-1.prod.example.com"
+port = 9102
+

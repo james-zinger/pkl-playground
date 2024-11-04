@@ -1,0 +1,14 @@
+class Auth {
+  username: String
+  password: String
+}
+
+class SQL {
+  host: String
+  port: UInt16
+  db: String
+  auth: Auth
+
+  function getConnectionString(sql: SQL): String = "\(sql.auth.username):\(sql.auth.password)@tcp(\(sql.host):\(sql.port)/\(sql.db)?parseTime=true&loc=UTC".trim()
+}
+

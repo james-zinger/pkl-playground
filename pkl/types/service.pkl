@@ -1,0 +1,10 @@
+class Service {
+  uri: Uri
+  rpcUri: Uri?
+}
+
+class MultiAddressService {
+  uris: List<Uri>
+  rpcUris: List<Uri>
+}
+

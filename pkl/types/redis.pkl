@@ -1,0 +1,12 @@
+module org.jameszinger.pkltest.RedisConfig
+
+class Auth {
+  username: String
+  password: String
+}
+
+class RedisConfig {
+    host: String
+    port: UInt16
+    auth: Auth?
+}

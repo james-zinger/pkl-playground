@@ -1,0 +1,13 @@
+amends ".../modules/service.pkl"
+
+import "../redis-1/usw-az1.pkl" as redis1
+
+host = "service1"
+port = 8001
+logLevel = "warn"
+
+databases {
+    Redis = new Mapping {
+        ["redis-1"] = redis1
+    }
+}

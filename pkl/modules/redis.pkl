@@ -1,0 +1,12 @@
+module org.jameszinger.pkltest.Redis
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.5.0#/go.pkl"
+
+class Auth {
+  username: String
+  password: String
+}
+
+host: String
+port: UInt16
+auth: Auth?

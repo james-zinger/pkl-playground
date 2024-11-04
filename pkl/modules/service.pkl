@@ -1,0 +1,22 @@
+module org.jameszinger.pkltest.Service
+
+import "package://pkg.pkl-lang.org/pkl-go/pkl.golang@0.5.0#/go.pkl"
+import "redis.pkl"
+import ".../types/s3.pkl"
+import ".../types/sql.pkl"
+import ".../types/service.pkl"
+
+typealias LogLevel = "error"|"warn"|"info"|"debug"
+
+host: String
+port: UInt16
+logLevel: LogLevel
+
+class Databases {
+    Redis: Mapping<String, Redis>
+    S3: Mapping<String, s3.S3>
+    SQL: Mapping<String, sql.SQL>
+}
+
+databases: Databases
+services: Mapping<String, service.Service|service.MultiAddressService>
